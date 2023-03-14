@@ -1,6 +1,8 @@
 class User < ApplicationRecord
   require 'securerandom'
 
+  has_many :auctions
+
   has_secure_password
 
   validates :email, presence: true, uniqueness: true
