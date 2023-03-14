@@ -1,0 +1,31 @@
+current directory: /Users/yan/Documents/projects/auction/vendor/cache/ruby/3.2.0/gems/puma-5.6.5/ext/puma_http11
+/Users/yan/.rvm/rubies/ruby-3.2.1/bin/ruby -I /Users/yan/.rvm/rubies/ruby-3.2.1/lib/ruby/3.2.0 extconf.rb --with-cflags\=-Wno-error\=implicit-function-declaration
+checking for BIO_read() in -lcrypto... yes
+checking for SSL_CTX_new() in -lssl... yes
+checking for openssl/bio.h... no
+checking for DTLS_method() in openssl/ssl.h... no
+checking for TLS_server_method() in openssl/ssl.h... no
+checking for SSL_CTX_set_min_proto_version(NULL, 0) in openssl/ssl.h... no
+checking for X509_STORE_up_ref()... yes
+checking for SSL_CTX_set_ecdh_auto(NULL, 0) in openssl/ssl.h... no
+checking for SSL_CTX_set_dh_auto(NULL, 0) in openssl/ssl.h... no
+checking for SSL_get1_peer_certificate() in openssl/ssl.h... no
+checking for Random.bytes... yes
+creating Makefile
+
+current directory: /Users/yan/Documents/projects/auction/vendor/cache/ruby/3.2.0/gems/puma-5.6.5/ext/puma_http11
+make DESTDIR\= sitearchdir\=./.gem.20230314-15996-umfoyj sitelibdir\=./.gem.20230314-15996-umfoyj clean
+
+current directory: /Users/yan/Documents/projects/auction/vendor/cache/ruby/3.2.0/gems/puma-5.6.5/ext/puma_http11
+make DESTDIR\= sitearchdir\=./.gem.20230314-15996-umfoyj sitelibdir\=./.gem.20230314-15996-umfoyj
+compiling http11_parser.c
+compiling mini_ssl.c
+compiling puma_http11.c
+linking shared-object puma/puma_http11.bundle
+
+current directory: /Users/yan/Documents/projects/auction/vendor/cache/ruby/3.2.0/gems/puma-5.6.5/ext/puma_http11
+make DESTDIR\= sitearchdir\=./.gem.20230314-15996-umfoyj sitelibdir\=./.gem.20230314-15996-umfoyj install
+/opt/homebrew/opt/coreutils/bin/ginstall -c -m 0755 puma_http11.bundle ./.gem.20230314-15996-umfoyj/puma
+
+current directory: /Users/yan/Documents/projects/auction/vendor/cache/ruby/3.2.0/gems/puma-5.6.5/ext/puma_http11
+make DESTDIR\= sitearchdir\=./.gem.20230314-15996-umfoyj sitelibdir\=./.gem.20230314-15996-umfoyj clean
