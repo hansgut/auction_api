@@ -1,7 +1,8 @@
 class User < ApplicationRecord
   require 'securerandom'
 
-  has_many :auctions
+  has_many :auctions, dependent: :destroy
+  has_many :bids
 
   has_secure_password
 
