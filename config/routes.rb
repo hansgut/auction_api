@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   end
   resources :users
   post "auth/login", to: "authentication#login"
+  get "current_user_auctions", to: "auctions#current_user_auctions"
+  get "current_user", to: "users#get_current_user"
 end

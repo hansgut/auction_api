@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   skip_before_action :authenticate_request, only: [:create]
-  before_action :set_user, only: [:show, :destroy]
+  before_action :set_user, only: [:show, :update, :destroy]
 
   # GET /users
   def index
@@ -40,6 +40,11 @@ class UsersController < ApplicationController
     else
       render json: { message: "user #{@user.username} was not deleted!" }, status: :bad_request
     end
+  end
+
+  # GET /current_user
+  def get_current_user
+    render json: @current_user
   end
 
   private

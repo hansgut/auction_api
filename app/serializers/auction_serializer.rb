@@ -3,6 +3,6 @@ class AuctionSerializer < ActiveModel::Serializer
   belongs_to :user
 
   def bids
-    object.bids.map { |bid| BidSerializer.new(bid) }
+    object.bids.order(id: :desc).map { |bid| BidSerializer.new(bid) }
   end
 end

@@ -11,6 +11,7 @@ class Bid < ApplicationRecord
   private
 
   def validate_higher_bid
+    return if price == auction.starting_price && auction.bids.count.zero?
     if price > auction.starting_price
       last_bid = auction.bids.order(price: :desc).first
       if last_bid.present? && price <= last_bid.price
@@ -26,7 +27,7 @@ class Bid < ApplicationRecord
   end
 
   def validate_auction_time
-    if auction.end_time <= Time.zone.now
+    if self.auction.end_date <= Time.zone.now
       errors.add(:auction, "time to biding is over")
     end
   end

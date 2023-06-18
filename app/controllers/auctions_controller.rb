@@ -3,7 +3,7 @@ class AuctionsController < ApplicationController
 
   # GET /auctions
   def index
-    @auctions = Auction.all
+    @auctions = Auction.where.not(user_id: @current_user.id).order(id: :desc)
 
     render json: @auctions
   end
@@ -53,6 +53,12 @@ class AuctionsController < ApplicationController
     else
       render json: { errors: @bid.errors.full_messages }, status: :unprocessable_entity
     end
+  end
+
+  # get /current_user_auctions
+  def current_user_auctions
+    @auctions = @current_user.auctions.order(created_at: :desc)
+    render json: @auctions
   end
 
   private
